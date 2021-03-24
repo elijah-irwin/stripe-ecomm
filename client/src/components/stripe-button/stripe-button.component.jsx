@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios'
 import StripeCheckout from 'react-stripe-checkout'
 
 // styles
@@ -11,9 +12,17 @@ const StripeCheckoutButton = ({ price }) => {
     'pk_test_51IX8ZZK8eTC0dC3Mqzti7ACdf2a81N6v8z6cK22niCZWUElS6qycrRIt4u7OSPqX0RjOYf0j0SKnby0VxHlOiEs700nnFp3N4x'
 
   // Success callback function for Stripe, to then be handled on backend
-  const onToken = token => {
-    console.log(token)
-    alert('Payment successful!')
+  const onToken = async token => {
+    const payload = { amount: priceForStripe, token }
+    try {
+      await axios.post('/payment', payload)
+      alert('Payment successful! 👍')
+    } catch (err) {
+      console.error(err)
+      alert(
+        'Payment error, make sure to use the specified test credit card below.'
+      )
+    }
   }
 
   return (
