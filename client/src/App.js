@@ -18,7 +18,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { setCurrentUser } from './redux/user/user.actions'
 
 // Styles
-import './App.css'
+import './App.scss'
+// import { GlobalStyle } from './global.styles'
 
 /*********************
  * MAIN APP
