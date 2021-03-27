@@ -8,14 +8,14 @@
       "type": "image/x-icon"
     },
     {
-      "src": "irwin192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "irwin512.png",
+      "src": "irwin-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "irwin-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
     }
   ],
   "start_url": ".",
