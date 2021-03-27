@@ -37,7 +37,6 @@ const NavBar = () => {
       </LogoContainer>
       <OptionsContainer>
         <OptionLink to='/shop'>SHOP</OptionLink>
-        <OptionLink to='/contact'>CONTACT</OptionLink>
         {currentUser ? (
           <OptionDiv onClick={() => auth.signOut()}>SIGN OUT</OptionDiv>
         ) : (
